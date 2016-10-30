@@ -4,7 +4,7 @@ package bean;
  * Created by Daniel Hirt ond Michel Tüscher
  */
 public class User {
-    private String uname, upw, uemail;
+    private String uname, pw, email, lname, fname;
 
     public String getUname(){
         return uname;
@@ -14,19 +14,29 @@ public class User {
         this.uname = uname;
     }
 
-    public String getUpw(){
-        return upw;
+    public String getPw(){
+        return pw;
     }
 
-    public void setUpw(String upw){
-        this.upw = upw;
+    public void setPw(String upw){
+        this.pw = upw;
     }
 
-    public String getUemail(){
-        return uemail;
+    public String getEmail(){
+        return email;
     }
 
-    public void setUemail(String uemail){
-        this.uemail = uemail;
+    public void setEmail(String uemail){
+        this.email = uemail;
     }
+
+    public String getLname() { return lname; }
+
+    public void setLname(String lname){ this.lname = lname; }
+
+    public String getFname() { return fname; }
+
+    public void setFname(String fname){ this.fname = fname; }
+
+
 }

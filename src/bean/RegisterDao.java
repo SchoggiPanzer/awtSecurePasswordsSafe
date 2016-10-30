@@ -12,10 +12,12 @@ public class RegisterDao {
 
         try {
             Connection con = ConnectionProvider.getCon();
-            PreparedStatement ps = con.prepareStatement("INSERT INTO users VALUES(?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO users VALUES(?,?,?,?,?)");
             ps.setString(1, u.getUname());
-            ps.setString(2, u.getUpw());
-            ps.setString(3, u.getUemail());
+            ps.setString(2, u.getPw());
+            ps.setString(3, u.getFname());
+            ps.setString(4, u.getLname());
+            ps.setString(5, u.getEmail());
 
             status = ps.executeUpdate();
         } catch (Exception e) {}
