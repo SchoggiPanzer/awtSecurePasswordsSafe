@@ -18,8 +18,8 @@ public class User {
         return pw;
     }
 
-    public void setPw(String upw){
-        this.pw = upw;
+    public void setPw(String pw){
+        this.pw = pw;
     }
 
     public String getEmail(){

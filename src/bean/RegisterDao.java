@@ -12,7 +12,8 @@ public class RegisterDao {
 
         try {
             Connection con = ConnectionProvider.getCon();
-            PreparedStatement ps = con.prepareStatement("INSERT INTO users VALUES(?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO users (username, password, fname, lname, email) " +
+                    "VALUES(?,?,?,?,?)");
             ps.setString(1, u.getUname());
             ps.setString(2, u.getPw());
             ps.setString(3, u.getFname());
@@ -20,7 +21,10 @@ public class RegisterDao {
             ps.setString(5, u.getEmail());
 
             status = ps.executeUpdate();
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            System.err.println("Got an exception");
+            System.err.println(e.getMessage());
+        }
 
         return status;
     }

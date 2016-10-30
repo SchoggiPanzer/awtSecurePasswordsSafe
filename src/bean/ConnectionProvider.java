@@ -10,10 +10,12 @@ public class ConnectionProvider {
 
     static {
         try {
-            Class.forName(DRIVER);
+            Class.forName(DRIVER).newInstance();
             con = DriverManager.getConnection(CONNECTION_URL,USERNAME,PASSWORD);
+            System.out.println("Connected to db");
         } catch (Exception e){
-            System.out.println("Exception: " + e.getMessage());
+            System.err.println("Got an exception");
+            System.err.println(e.getMessage());
         }
     }
 

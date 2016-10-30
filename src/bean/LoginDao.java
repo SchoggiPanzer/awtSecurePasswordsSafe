@@ -21,7 +21,10 @@ public class LoginDao {
 
             ResultSet rs = ps.executeQuery();
             status = rs.next();
-        } catch (Exception e){}
+        } catch (Exception e){
+            System.err.println("Got an exception");
+            System.err.println(e.getMessage());
+        }
 
         return status;
     }

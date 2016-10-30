@@ -15,8 +15,8 @@
         Firstname: <input type="text" name="fname" /><br/>
         Lastname: <input type="text" name="lname" /><br/>
         Username: <input type="text" name="uname" /><br/>
-        Email: <input type="text" name="uemail"/><br/>
-        Password: <input type="password" name="upassword"/><br/>
+        Email: <input type="text" name="email"/><br/>
+        Password: <input type="password" name="password"/><br/>
         <input type="submit" value="Register">
     </form>
 </body>
