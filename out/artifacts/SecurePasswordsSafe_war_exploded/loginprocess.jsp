@@ -14,7 +14,7 @@
     boolean status = LoginDao.validate(obj);
 
     if(status){
-        out.print("You successfully logged in");
+        out.print("You successfully logged in "+ obj.getPw());
         session.setAttribute("session","TRUE");
     } else {
         out.print("Sorry, email or password error");

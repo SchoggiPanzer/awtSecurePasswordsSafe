@@ -14,7 +14,7 @@ public class LoginDao {
         try {
             Connection con = ConnectionProvider.getCon();
 
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM users WHERE email=? AND password=?");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM users WHERE email= ? AND password= ?");
 
             ps.setString(1, u.getEmail());
             ps.setString(2, u.getPw());
