@@ -1,0 +1,23 @@
+
+/* CSS for welcome.jsp */
+
+.wel_con {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /*border: dotted #0f0f0f;*/
+}
+
+.login_con {
+    margin: 2%;
+    padding: 5px;
+    float: left;
+    /*border: dotted #0f0f0f;*/
+}
+
+.reg_con {
+    margin: 2%;
+    padding: 5px;
+    float: left;
+    /*border: dotted #0f0f0f;*/
+}
