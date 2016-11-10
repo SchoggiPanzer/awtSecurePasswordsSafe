@@ -7,9 +7,11 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 .idea/workspace.xml
+out/
 
 # Class Files #
 *.class
+
 
 # Package Files #
 *.jar
