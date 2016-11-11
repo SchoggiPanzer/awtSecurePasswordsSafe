@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by Daniel Hirt ond Michel Tüscher
  */
-public class overviewDao {
+public class OverviewDao {
     public static List<Account> getAccountsById(int id){
         ArrayList<Account> accounts = new ArrayList<>();
         try {
