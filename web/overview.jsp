@@ -10,16 +10,13 @@
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%
-    List<Account> accounts = OverviewDao.getAccountsById(1);
-%>
-
 <html>
 <head>
     <title>overview</title>
 </head>
 <body>
-    <form name="accounts" >
+<form name="accounts">
+    <table>
         <tr>
             <td>Title</td>
             <td>URL</td>
@@ -27,15 +24,25 @@
             <td>Password</td>
             <td>Options</td>
         </tr>
-        <c:forEach items="$(accounts)" var="account">
-            <tr>
-                <td><c:out value="$(account.title)" />></td>
-                <td><c:out value="$(account.website)" />></td>
-                <td><c:out value="$(account.username)" />></td>
-                <td><c:out value="$(account.password)" />></td>
-                <td></td>
-            </tr>
-        </c:forEach>
-    </form>
+        <%
+            int id = Integer.parseInt(session.getAttribute("user_id").toString());
+            List<Account> accounts = OverviewDao.getAccountsById(id);
+
+            for (Account acc : accounts) {
+                out.print("<tr><td>");
+                out.print(acc.getTitle());
+                out.print("</td><td>");
+                out.print(acc.getWebsite());
+                out.print("</td><td>");
+                out.print(acc.getUsername());
+                out.print("</td><td>");
+                out.print(acc.getPassword());
+                out.print("</td><td>");
+                out.print("</td></tr>");
+            }
+        %>
+    </table>
+</form>
+<a href="accountNew.jsp">Create new account</a>
 </body>
 </html>

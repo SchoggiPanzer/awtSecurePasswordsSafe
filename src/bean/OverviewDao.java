@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by Daniel Hirt ond Michel Tüscher
  */
-public class overviewDao {
+public class OverviewDao {
     public static List<Account> getAccountsById(int id){
         ArrayList<Account> accounts = new ArrayList<>();
         try {
@@ -26,7 +26,6 @@ public class overviewDao {
                 String website= rs.getString("website");
                 String username = rs.getString("username");
                 String password = rs.getString("password");
-                accounts.add(new Account(accountId, title, website, username, password));
                 accounts.add(new Account(accountId, title, website, username, password));
             }
 
