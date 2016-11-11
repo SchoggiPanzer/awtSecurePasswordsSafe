@@ -15,7 +15,11 @@
 <%
     User user = LoginDao.validate(obj);
 
+<<<<<<< HEAD
     if(!isNull(user)) {
+=======
+    if(status){
+>>>>>>> master
         out.print("You successfully logged in "+ obj.getUname());
         session.setAttribute("session","TRUE");
         session.setAttribute("user_id", user.getId());
