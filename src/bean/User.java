@@ -5,6 +5,13 @@ package bean;
  */
 public class User {
     private String uname, pw, email, lname, fname;
+    private int id;
+
+    public void setId(int id){ this.id = id; }
+
+    public int getId(){
+        return id;
+    }
 
     public String getUname(){
         return uname;

@@ -27,7 +27,6 @@ public class OverviewDao {
                 String username = rs.getString("username");
                 String password = rs.getString("password");
                 accounts.add(new Account(accountId, title, website, username, password));
-                accounts.add(new Account(accountId, title, website, username, password));
             }
 
         } catch (Exception e){

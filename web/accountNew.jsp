@@ -8,9 +8,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Create new Account</title>
 </head>
 <body>
-$END$
+    <form name="new Account" action="accountNewprocess.jsp">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title">
+        <label for="website">Website</label>
+        <input type="text" name="website" id="website">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <label for="password" >Password</label>
+        <input type="password" name="password" id="password">
+        <button id="btnPasswordGen">Generate Password</button>
+        <input type="submit" name="Create">
+    </form>
 </body>
 </html>
