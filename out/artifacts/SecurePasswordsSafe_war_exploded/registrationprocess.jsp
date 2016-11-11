@@ -7,12 +7,12 @@
 --%>
 <%@ page import="bean.RegisterDao" %>
 
-<jsp:useBean id="obj" class="bean.User"/>
+<jsp:useBean id="usr" class="bean.User"/>
 
-<jsp:setProperty name="obj" property="*"/>
+<jsp:setProperty name="usr" property="*"/>
 
 <%
-    int status = RegisterDao.register(obj);
+    int status = RegisterDao.register(usr);
     if (status>0) out.print("You are successfully registered");
     else out.print("Error");
 %>
