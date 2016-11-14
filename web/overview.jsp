@@ -15,11 +15,11 @@
     <table class="table">
         <thead class="thead-inverse">
             <tr>
-                <td>Title</td>
+                <td><fmt:message key="overv.title"/></td>
                 <td>URL</td>
-                <td>Username</td>
-                <td>Password</td>
-                <td>Options</td>
+                <td><fmt:message key="wel.lbl.usern"/></td>
+                <td><fmt:message key="wel.lbl.pw"/></td>
+                <td><fmt:message key="overv.option"/></td>
             </tr>
         </thead>
         <%
@@ -43,7 +43,7 @@
 </form>
 <form action="accountNew.jsp">
     <button type="submit" class="btn btn-default">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> new account
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><fmt:message key="overv.newAcc"/>
     </button>
 </form>
 

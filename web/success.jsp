@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="header.jsp"%>
 
-<h1>You are successfully registered!</h1>
+<h1><fmt:message key="succ.msg"/></h1>
 
-<p>Go to <a href="welcome.jsp">login</a></p>
+<p><fmt:message key="succ.goto"/> <a href="welcome.jsp">Login</a></p>
 
 </body>
 </html>

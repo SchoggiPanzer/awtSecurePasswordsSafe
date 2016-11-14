@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="header.jsp"%>
 
-<h1>Whoops something went wrong</h1>
+<h1><fmt:message key="err.msg"/></h1>
 
-<p>Go back to <a href="welcome.jsp">login page</a></p>
+<h4><fmt:message key="err.go"/> <a href="welcome.jsp"><fmt:message key="err.back"/></a></h4>
 
 </body>
 </html>
