@@ -11,8 +11,14 @@
 
 <jsp:setProperty name="obj" property="*"/>
 
+<script src="resources/js/jsPwSafe.js"></script>
+
 <%
     int status = RegisterDao.register(obj);
-    if (status>0) out.print("You are successfully registered");
-    else out.print("Error");
+    if (status>0) {
+        response.sendRedirect("success.jsp");
+    }
+    else {
+        response.sendRedirect("error.jsp");
+    }
 %>

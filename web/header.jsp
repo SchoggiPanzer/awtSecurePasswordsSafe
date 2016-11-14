@@ -14,12 +14,16 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Password Safe</a>
+                <p class="navbar-brand">Password Safe</p>
             </div>
+
             <ul class="nav navbar-nav navbar-right">
                 <%
                     if (session.getAttribute("username") != null){ %>
                         <li><form action="logout.jsp">
+                            <h4 style="float: left; margin-right: 5px">
+                                Logged in as <% out.print(session.getAttribute("username")); %>
+                            </h4>
                             <button type="submit" class="btn btn-default">Logout</button>
                         </form></li>
                 <%  } %>
