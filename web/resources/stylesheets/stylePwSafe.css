@@ -21,3 +21,15 @@
     float: left;
     /*border: dotted #0f0f0f;*/
 }
+
+.lang {
+    margin: 5px;
+}
+
+.btn-logout {
+    margin: 5px;
+}
+
+.username {
+    margin: 5px;
+}

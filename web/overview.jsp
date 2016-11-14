@@ -9,21 +9,19 @@
 <%@ page import="bean.Account" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="header.jsp"%>
 
-<html>
-<head>
-    <title>overview</title>
-</head>
-<body>
 <form name="accounts">
-    <table>
-        <tr>
-            <td>Title</td>
-            <td>URL</td>
-            <td>Username</td>
-            <td>Password</td>
-            <td>Options</td>
-        </tr>
+    <table class="table">
+        <thead class="thead-inverse">
+            <tr>
+                <td><fmt:message key="overv.title"/></td>
+                <td>URL</td>
+                <td><fmt:message key="wel.lbl.usern"/></td>
+                <td><fmt:message key="wel.lbl.pw"/></td>
+                <td><fmt:message key="overv.option"/></td>
+            </tr>
+        </thead>
         <%
             int id = Integer.parseInt(session.getAttribute("user_id").toString());
             List<Account> accounts = OverviewDao.getAccountsById(id);
@@ -43,6 +41,9 @@
         %>
     </table>
 </form>
-<a href="accountNew.jsp">Create new account</a>
-</body>
-</html>
+<form action="accountNew.jsp">
+    <button type="submit" class="btn btn-default">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><fmt:message key="overv.newAcc"/>
+    </button>
+</form>
+
