@@ -21,7 +21,7 @@
         <label for="password" ><fmt:message key="wel.lbl.pw"/></label>
         <input type="password" name="password" id="password"></br></br
 
-        <button id="btnPasswordGen" name="<fmt:message key="acc.genPw"/>"></button>
+        <button id="btnPasswordGen"><fmt:message key="acc.genPw"/></button>
         <input type="submit" name="<fmt:message key="acc.create"/>">
     </form>
 </body>
