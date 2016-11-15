@@ -6,22 +6,23 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Create new Account</title>
-</head>
-<body>
+<%@ include file="header.jsp"%>
+
     <form name="new Account" action="accountNewprocess.jsp">
-        <label for="title">Title</label>
+        <label for="title"><fmt:message key="overv.title"/></label>
         <input type="text" name="title" id="title">
-        <label for="website">Website</label>
+
+        <label for="website"><fmt:message key="acc.webs"/></label>
         <input type="text" name="website" id="website">
-        <label for="username">Username</label>
+
+        <label for="username"><fmt:message key="wel.lbl.usern"/></label>
         <input type="text" name="username" id="username">
-        <label for="password" >Password</label>
-        <input type="password" name="password" id="password">
-        <button id="btnPasswordGen">Generate Password</button>
-        <input type="submit" name="Create">
+
+        <label for="password" ><fmt:message key="wel.lbl.pw"/></label>
+        <input type="password" name="password" id="password"></br></br
+
+        <button id="btnPasswordGen"><fmt:message key="acc.genPw"/></button>
+        <input type="submit" name="<fmt:message key="acc.create"/>">
     </form>
 </body>
 </html>
