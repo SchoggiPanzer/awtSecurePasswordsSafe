@@ -15,7 +15,7 @@
 <html>
 <head>
     <jsp:include page="include.jsp"/>
-    <script type="text/javascript" src=https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="resources/js/jquery.jcryption.3.1.0.js"></script>
 </head>
 <body>
