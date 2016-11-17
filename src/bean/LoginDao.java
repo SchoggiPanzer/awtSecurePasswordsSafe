@@ -6,8 +6,16 @@ import java.sql.ResultSet;
 
 /**
  * Created by Daniel Hirt ond Michel Tüscher
+ *
+ * Data Access Object for Login
  */
 public class LoginDao {
+
+    /**
+     * validate if the user is in the database
+     * @param u datas from the user
+     * @return user datas when in database else null
+     */
     public static User validate(User u){
         try {
             Connection con = ConnectionProvider.getCon();

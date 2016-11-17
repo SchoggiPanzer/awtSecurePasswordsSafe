@@ -4,6 +4,8 @@ import static bean.Provider.*;
 
 /**
  * Created by Daniel Hirt ond Michel Tüscher
+ *
+ * Creates connection to the database
  */
 public class ConnectionProvider {
     private static Connection con=null;

@@ -1,16 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: awt
-  Date: 10.11.16
-  Time: 12:43
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="header.jsp"%>
 
+<%-- Welcome page. Contains login and registration at the same Page --%>
 <div class="wel_con">
     <div class="login_con">
         <h1>Login</h1>
+        <%-- Form for login --%>
         <form action="loginprocess.jsp" method="post">
             <label for="log_uname">
                 <fmt:message key="wel.lbl.usern"/>:
@@ -27,6 +22,7 @@
     </div>
     <div class="reg_con">
         <h1><fmt:message key="wel.lbl.regtit"/></h1>
+        <%-- Form for registraition --%>
         <form action="registrationprocess.jsp">
             <label for="reg_uname">
                 <fmt:message key="wel.lbl.usern"/>:

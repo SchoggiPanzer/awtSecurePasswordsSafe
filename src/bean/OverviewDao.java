@@ -8,8 +8,16 @@ import java.util.List;
 
 /**
  * Created by Daniel Hirt ond Michel Tüscher
+ *
+ * Data Access Object for the accounts
  */
 public class OverviewDao {
+
+    /**
+     * Return all Accounts from a userid
+     * @param id the userid
+     * @return a List with all accounts
+     */
     public static List<Account> getAccountsById(int id){
         ArrayList<Account> accounts = new ArrayList<>();
         try {

@@ -5,9 +5,16 @@ import java.sql.PreparedStatement;
 
 /**
  * Created by Daniel Hirt ond Michel Tüscher
+ *
+ * Data Access Object for the Registration
  */
 public class RegisterDao {
 
+    /**
+     * Insert the registered user in the db
+     * @param u user datas
+     * @return status of the insertion
+     */
     public static int register(User u){
         int status = 0;
         String uname, pw, fname, lname, email;

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: awt
-  Date: 10.11.16
-  Time: 12:45
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -12,11 +5,11 @@
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
 <fmt:setLocale value="${language}"/>
 <fmt:setBundle basename="bundles.text"/>
+
+<%-- The Header for all Pages --%>
 <html>
 <head>
     <jsp:include page="include.jsp"/>
-    <script type="text/javascript" src="resources/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="resources/js/jquery.jcryption.3.1.0.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -28,6 +21,7 @@
             <ul class="nav navbar-nav navbar-right lang">
                 <li>
                     <form>
+                        <%-- Selection for the language --%>
                         <select id="language" name="language" onchange="submit()">
                             <option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
                             <option value="de" ${language == 'de' ? 'selected' : ''}>German</option>
@@ -35,7 +29,9 @@
                         </select>
                     </form>
                 </li>
-                <% if (session.getAttribute("username") != null){ %>
+
+                <%  // shows the username and the logout button just when someone is logged in
+                    if (session.getAttribute("username") != null){ %>
                 <li class="username">
                     <h4 style="float: left; margin-right: 5px">
                         Logged in as <% out.print(session.getAttribute("username")); %>

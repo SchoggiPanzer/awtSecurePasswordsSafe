@@ -2,6 +2,8 @@ package bean;
 
 /**
  * Created by Daniel Hirt ond Michel Tüscher
+ *
+ * Contains all Datas for the connection to the database
  */
 public interface Provider {
     String DRIVER = "com.mysql.jdbc.Driver";
