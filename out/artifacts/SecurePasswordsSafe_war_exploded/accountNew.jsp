@@ -1,13 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: awt
-  Date: 10.11.16
-  Time: 14:16
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="header.jsp"%>
 
+    <%--
+    Form for create a new Account
+    --%>
     <form name="new Account" action="accountNewprocess.jsp">
         <label for="title"><fmt:message key="overv.title"/></label>
         <input type="text" name="title" id="title">

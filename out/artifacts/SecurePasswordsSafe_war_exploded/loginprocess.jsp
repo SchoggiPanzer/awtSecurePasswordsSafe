@@ -1,20 +1,16 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: awt
-  Date: 30.10.16
-  Time: 16:39
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page import="bean.LoginDao" %>
 <%@ page import="bean.User" %>
 <%@ page import="static java.util.Objects.isNull" %>
-<jsp:useBean id="obj" class="bean.User"/>
 
+<jsp:useBean id="obj" class="bean.User"/>
 <jsp:setProperty name="obj" property="*"/>
 
+<%-- Process for the login --%>
 <%
+    //Gets the data from the LoginDao
     User user = LoginDao.validate(obj);
 
+    //Sets the session attributs when the login is ok, else sends the error Page
     if(!isNull(user)) {
         out.print("You successfully logged in "+ obj.getUname());
         session.setAttribute("session","TRUE");
@@ -22,6 +18,6 @@
         session.setAttribute("username", user.getUname());
         response.sendRedirect("overview.jsp");
     } else {
-        out.print("Sorry, user or password  wrong");
+        response.sendRedirect("error.jsp");
     }
 %>

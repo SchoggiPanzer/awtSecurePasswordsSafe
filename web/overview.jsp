@@ -9,6 +9,7 @@
     <table class="table">
         <thead class="thead-inverse">
             <tr>
+                <td style="visibility: hidden;"></td>
                 <td><fmt:message key="overv.title"/></td>
                 <td>URL</td>
                 <td><fmt:message key="wel.lbl.usern"/></td>
@@ -21,19 +22,16 @@
             int id = Integer.parseInt(session.getAttribute("user_id").toString());
             List<Account> accounts = OverviewDao.getAccountsById(id);
 
-            for (Account acc : accounts) {
-                out.print("<tr><td>");
-                out.print(acc.getTitle());
-                out.print("</td><td>");
-                out.print(acc.getWebsite());
-                out.print("</td><td>");
-                out.print(acc.getUsername());
-                out.print("</td><td>");
-                out.print(acc.getPassword());
-                out.print("</td><td>");
-                out.print("</td></tr>");
-            }
-        %>
+            for (Account acc : accounts) { %>
+                <tr>
+                    <td style="visibility: hidden;"> <% acc.getID(); %></td>
+                    <td> <% out.print(acc.getTitle()); %> </td>
+                    <td> <% out.print(acc.getWebsite()); %> </td>
+                    <td> <% out.print(acc.getUsername()); %> </td>
+                    <td> <% out.print(acc.getPassword()); %> </td>
+                    <td></td>
+                </tr>
+            <% } %>
     </table>
 </form>
 
