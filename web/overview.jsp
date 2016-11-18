@@ -24,12 +24,19 @@
 
             for (Account acc : accounts) { %>
                 <tr>
-                    <td style="visibility: hidden;"> <% acc.getID(); %></td>
                     <td> <% out.print(acc.getTitle()); %> </td>
                     <td> <% out.print(acc.getWebsite()); %> </td>
                     <td> <% out.print(acc.getUsername()); %> </td>
                     <td> <% out.print(acc.getPassword()); %> </td>
-                    <td></td>
+                    <td>
+                        <form action="deleteAcc.jsp" method="post">
+                            <input name="accId" type="text" style="visibility: hidden;"
+                                   value="<% out.print(acc.getID()); %>"/>
+                            <button type="submit" class="btn btn-default">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </form>
+                    </td>
                 </tr>
             <% } %>
     </table>
@@ -38,7 +45,7 @@
 <%-- Form for creating new Account --%>
 <form action="accountNew.jsp">
     <button type="submit" class="btn btn-default">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><fmt:message key="overv.newAcc"/>
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <fmt:message key="overv.newAcc"/>
     </button>
 </form>
 

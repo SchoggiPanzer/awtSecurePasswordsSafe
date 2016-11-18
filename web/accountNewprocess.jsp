@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="bean.AccountNewDao" %>
+<%@ page import="bean.AccountDao" %>
 <jsp:useBean id="acc" class="bean.Account"/>
 <jsp:setProperty name="acc" property="*"/>
 
@@ -18,7 +18,7 @@
     out.println(acc.getPassword());
     out.println(acc.getUsername());
     out.println(acc.getWebsite());
-    boolean created = AccountNewDao.createNewAccount(id, acc);
+    boolean created = AccountDao.createNewAccount(id, acc);
 
     if(created){
         out.print("Account successfully created");
