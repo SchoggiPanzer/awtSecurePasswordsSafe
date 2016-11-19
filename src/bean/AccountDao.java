@@ -52,6 +52,7 @@ public class AccountDao {
             System.out.println(e.getMessage());;
             return false;
         }
+        System.out.println("Acc deleted");
         return true;
     }
 }

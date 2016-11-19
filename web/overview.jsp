@@ -9,7 +9,6 @@
     <table class="table">
         <thead class="thead-inverse">
             <tr>
-                <td style="visibility: hidden;"></td>
                 <td><fmt:message key="overv.title"/></td>
                 <td>URL</td>
                 <td><fmt:message key="wel.lbl.usern"/></td>
@@ -29,12 +28,15 @@
                     <td> <% out.print(acc.getUsername()); %> </td>
                     <td> <% out.print(acc.getPassword()); %> </td>
                     <td>
-                        <form action="deleteAcc.jsp" method="post">
-                            <input name="accId" type="text" style="visibility: hidden;"
+                        <form action="deleteAcc.jsp">
+                            <input id="accountId" name="accountId" type="text" style="visibility: hidden;"
                                    value="<% out.print(acc.getID()); %>"/>
-                            <button type="submit" class="btn btn-default">
-                                <span class="glyphicon glyphicon-trash"></span>
-                            </button>
+                            <button type="submit" class="btn btn-default"><fmt:message key="overv.delete"/></button>
+                        </form>
+                        <form action="deleteAcc.jsp">
+                            <input id="accountId" name="accountId" type="text" style="visibility: hidden;"
+                                   value="<% out.print(acc.getID()); %>"/>
+                            <button type="submit" class="btn btn-default"><fmt:message key="overv.delete"/></button>
                         </form>
                     </td>
                 </tr>
