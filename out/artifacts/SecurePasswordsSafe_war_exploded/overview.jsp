@@ -31,12 +31,9 @@
                         <form action="deleteAcc.jsp">
                             <input id="accountId" name="accountId" type="text" style="visibility: hidden;"
                                    value="<% out.print(acc.getID()); %>"/>
-                            <button type="submit" class="btn btn-default"><fmt:message key="overv.delete"/></button>
-                        </form>
-                        <form action="deleteAcc.jsp">
-                            <input id="accountId" name="accountId" type="text" style="visibility: hidden;"
-                                   value="<% out.print(acc.getID()); %>"/>
-                            <button type="submit" class="btn btn-default"><fmt:message key="overv.delete"/></button>
+                            <button type="submit" class="btn btn-default">
+                                <span class="glyphicon glyphicon-plus"></span> <fmt:message key="overv.delete"/>
+                            </button>
                         </form>
                     </td>
                 </tr>

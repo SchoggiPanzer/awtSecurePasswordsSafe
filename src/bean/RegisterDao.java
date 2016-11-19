@@ -25,6 +25,8 @@ public class RegisterDao {
         lname = u.getLname();
         email = u.getEmail();
 
+        System.out.println("saved datas");
+
         try {
             Connection con = ConnectionProvider.getCon();
 

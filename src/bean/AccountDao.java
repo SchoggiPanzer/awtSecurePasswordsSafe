@@ -9,7 +9,7 @@ import java.sql.ResultSet;
  *
  * Data Access Object for creating new Account
  */
-public class AccountNewDao {
+public class AccountDao {
     /**
      * function for creating new account
      * gets the data from the form and insert they in the db
@@ -37,6 +37,22 @@ public class AccountNewDao {
             System.err.println(e.getMessage());
             return false;
         }
+        return true;
+    }
+
+    public static boolean deleteAcc(int id){
+        try {
+           Connection con = ConnectionProvider.getCon();
+
+            PreparedStatement ps = con.prepareStatement("DELETE FROM accounts where account_id = ?");
+            ps.setInt(1, id);
+
+            ps.executeUpdate();
+        } catch (Exception e){
+            System.out.println(e.getMessage());;
+            return false;
+        }
+        System.out.println("Acc deleted");
         return true;
     }
 }
