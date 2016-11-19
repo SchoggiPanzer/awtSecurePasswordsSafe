@@ -23,22 +23,22 @@
 
             for (Account acc : accounts) { %>
                 <tr>
-                    <form id="changeAcc" action="changeAcc.jsp">
-                        <input name="accountId" type="text" style="visibility: hidden;"
-                               value="<% out.print(acc.getID()); %>"/>
-                        <td> <% out.print(acc.getTitle()); %> </td>
-                        <td> <% out.print(acc.getWebsite()); %> </td>
-                        <td> <% out.print(acc.getUsername()); %> </td>
-                        <td> <% out.print(acc.getPassword()); %> </td>
-                    </form>
+                    <td> <% out.print(acc.getTitle()); %> </td>
+                    <td> <% out.print(acc.getWebsite()); %> </td>
+                    <td> <% out.print(acc.getUsername()); %> </td>
+                    <td> <% out.print(acc.getPassword()); %> </td>
                     <td>
                         <div>
-                            <form action="deleteAcc.jsp">
+                            <form action="deleteAcc.jsp" style="float: left">
                                 <input name="accountId" type="text" style="visibility: hidden;"
                                        value="<% out.print(acc.getID()); %>"/>
                                 <button type="submit" class="btn btn-default"><fmt:message key="overv.delete"/></button>
                             </form>
-                            <button form="changeAcc" type="submit" class="btn btn-default"><fmt:message key="overv.edit"/></button>
+                            <form action="accountNew.jsp" style="float: left;">
+                                <input name="accountId" type="text" style="visibility: hidden;"
+                                       value="<% out.print(acc.getID()); %>"/>
+                                <button type="submit" class="btn btn-default"><fmt:message key="overv.edit"/></button>
+                            </form>
                         </div>
 
                     </td>

@@ -49,10 +49,35 @@ public class AccountDao {
 
             ps.executeUpdate();
         } catch (Exception e){
-            System.out.println(e.getMessage());;
+            System.out.println(e.getMessage());
             return false;
         }
         System.out.println("Acc deleted");
         return true;
+    }
+
+
+    public static Account getAcc(int id) {
+        try {
+            Connection con = ConnectionProvider.getCon();
+
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM accounts WHERE account_id = ?");
+            ps.setInt(1, id);
+
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()){
+                Account acc = new Account();
+                acc.setTitle(rs.getString("title"));
+                acc.setPassword(rs.getString("password"));
+                acc.setUsername(rs.getString("username"));
+                acc.setWebsite(rs.getString("website"));
+                return acc;
+            }
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+        return null;
     }
 }

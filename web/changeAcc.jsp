@@ -7,7 +7,7 @@ Form for create a new Account
 --%>
 
 
-<form name="new Account" action="accountNewprocess.jsp">
+<form action="changeAccProcess.jsp">
     <%
         String accId = request.getParameter("accountId");
         System.out.println(accId);
@@ -42,7 +42,7 @@ Form for create a new Account
     <label for="password"><fmt:message key="wel.lbl.pw"/></label>
     <input type="text" name="password" id="passwordChg"><br><br>
     <input type="button" class="btnPasswordGen" value=
-    <fmt:message key="acc.genPw"/>/>
+            <fmt:message key="acc.genPw"/>/>
     <br>
     <input type="submit" name="<fmt:message key="acc.change"/>">
 </form>
