@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd084b01-bc82-40d9-9d74-2fe421aa2e18" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/changeAcc.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/changeAccProcess.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecurePasswordsSafe_war_exploded/accountNew.jsp" afterPath="$PROJECT_DIR$/out/artifacts/SecurePasswordsSafe_war_exploded/accountNew.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecurePasswordsSafe_war_exploded/overview.jsp" afterPath="$PROJECT_DIR$/out/artifacts/SecurePasswordsSafe_war_exploded/overview.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bean/AccountDao.java" afterPath="$PROJECT_DIR$/src/bean/AccountDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bundles/text.properties" afterPath="$PROJECT_DIR$/src/bundles/text.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bundles/text_de.properties" afterPath="$PROJECT_DIR$/src/bundles/text_de.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bundles/text_fr.properties" afterPath="$PROJECT_DIR$/src/bundles/text_fr.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/accountNew.jsp" afterPath="$PROJECT_DIR$/web/accountNew.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/changeAcc.jsp" afterPath="$PROJECT_DIR$/web/changeAcc.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/deleteAcc.jsp" afterPath="$PROJECT_DIR$/web/deleteAcc.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/overview.jsp" afterPath="$PROJECT_DIR$/web/overview.jsp" />
     </list>
     <ignored path="SecurePasswordsSafe.iws" />
@@ -41,41 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="overview.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="overview.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/overview.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accountNew.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/accountNew.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changeAcc.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/changeAcc.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accountNewprocess.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/accountNewprocess.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="-107">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -133,12 +102,14 @@
         <option value="$PROJECT_DIR$/src/bean/AccountNewDao.java" />
         <option value="$PROJECT_DIR$/src/bean/RegisterDao.java" />
         <option value="$PROJECT_DIR$/src/bean/Provider.java" />
+        <option value="$PROJECT_DIR$/src/bundles/text.properties" />
+        <option value="$PROJECT_DIR$/web/accountNew.jsp" />
         <option value="$PROJECT_DIR$/web/deleteAcc.jsp" />
         <option value="$PROJECT_DIR$/web/changeAcc.jsp" />
         <option value="$PROJECT_DIR$/src/bean/AccountDao.java" />
-        <option value="$PROJECT_DIR$/src/bundles/text.properties" />
+        <option value="$PROJECT_DIR$/src/bean/Account.java" />
+        <option value="$PROJECT_DIR$/web/changeAccProcess.jsp" />
         <option value="$PROJECT_DIR$/web/overview.jsp" />
-        <option value="$PROJECT_DIR$/web/accountNew.jsp" />
       </list>
     </option>
   </component>
@@ -277,14 +248,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resource Bundle 'text'" />
-              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -870,12 +833,12 @@
       <workItem from="1479378733516" duration="933000" />
       <workItem from="1479380043045" duration="19061000" />
       <workItem from="1479463297824" duration="6717000" />
-      <workItem from="1479563573893" duration="3558000" />
+      <workItem from="1479563573893" duration="7462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69125000" />
+    <option name="totallyTimeSpent" value="73029000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -888,7 +851,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1375" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -899,7 +862,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904884" sideWeight="0.5026336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3470437" sideWeight="0.49736643" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3470437" sideWeight="0.49736643" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22622108" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1045,18 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/96d28e22/54dd0f1e-b67e-4535-9a40-79d630297674/passwordStorage.users">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -1069,6 +1020,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,6 +1028,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1128,7 +1081,7 @@
         <state relative-caret-position="485">
           <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1479561960270" expanded="true" signature="763:912" ph="INSERT INTO users... " />
           </folding>
         </state>
@@ -1270,6 +1223,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1413,14 +1367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/deleteAcc.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bean/OverviewDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1448,26 +1394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean/AccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-          <folding>
-            <marker date="1479565844594" expanded="true" signature="690:779" ph="INSERT INTO accounts... " />
-            <marker date="1479565844594" expanded="true" signature="1396:1437" ph="DELETE FROM ... " />
-            <marker date="1479565844594" expanded="true" signature="1864:1907" ph="SELECT * FRO... accounts" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bundles/text.properties">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1479,34 +1405,73 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/accountNewprocess.jsp">
+    <entry file="file://$PROJECT_DIR$/web/deleteAcc.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/changeAcc.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/overview.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+        <state relative-caret-position="198">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/accountNew.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="36">
+          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="100" column="42" selection-start-line="100" selection-start-column="42" selection-end-line="100" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/changeAcc.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/changeAccProcess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/accountNewprocess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/AccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
+          <folding>
+            <marker date="1479651677691" expanded="true" signature="690:779" ph="INSERT INTO accounts... " />
+            <marker date="1479651677691" expanded="true" signature="1396:1437" ph="DELETE FROM ... " />
+            <marker date="1479651677691" expanded="true" signature="1864:1907" ph="SELECT * FRO... accounts" />
+            <marker date="1479651677691" expanded="true" signature="2657:2719" ph="UPDATE accou... " />
+            <marker date="1479651677691" expanded="true" signature="2657:2726" ph="UPDATE accou... " />
+            <marker date="1479651677691" expanded="true" signature="2657:2738" ph="UPDATE accou... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/overview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding />
         </state>
       </provider>

@@ -80,4 +80,24 @@ public class AccountDao {
         }
         return null;
     }
+
+    public static boolean update(int id, Account a) {
+        try {
+            Connection con = ConnectionProvider.getCon();
+
+            PreparedStatement ps = con.prepareStatement("UPDATE accounts SET title=?, website=?, username=?, password=? WHERE account_id=?");
+
+            ps.setString(1, a.getTitle());
+            ps.setString(2, a.getWebsite());
+            ps.setString(3, a.getUsername());
+            ps.setString(4, a.getPassword());
+            ps.setInt(5, id);
+
+            ps.executeUpdate();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+        return true;
+    }
 }

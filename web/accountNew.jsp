@@ -3,7 +3,7 @@
 <%--
 Form for create a new Account
 --%>
-<form name="add Account" action="accountNewprocess.jsp.jsp">
+<form name="add Account" action="accountNewprocess.jsp">
     <label for="title"><fmt:message key="overv.title"/></label>
     <input type="text" name="title" id="title">
     <br>

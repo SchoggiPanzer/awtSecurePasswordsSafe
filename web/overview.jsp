@@ -13,7 +13,8 @@
                 <td>URL</td>
                 <td><fmt:message key="wel.lbl.usern"/></td>
                 <td><fmt:message key="wel.lbl.pw"/></td>
-                <td><fmt:message key="overv.option"/></td>
+                <td></td>
+                <td></td>
             </tr>
         </thead>
         <%
@@ -28,19 +29,18 @@
                     <td> <% out.print(acc.getUsername()); %> </td>
                     <td> <% out.print(acc.getPassword()); %> </td>
                     <td>
-                        <div>
-                            <form action="deleteAcc.jsp" style="float: left">
-                                <input name="accountId" type="text" style="visibility: hidden;"
-                                       value="<% out.print(acc.getID()); %>"/>
-                                <button type="submit" class="btn btn-default"><fmt:message key="overv.delete"/></button>
-                            </form>
-                            <form action="accountNew.jsp" style="float: left;">
-                                <input name="accountId" type="text" style="visibility: hidden;"
-                                       value="<% out.print(acc.getID()); %>"/>
-                                <button type="submit" class="btn btn-default"><fmt:message key="overv.edit"/></button>
-                            </form>
-                        </div>
-
+                        <form action="deleteAcc.jsp">
+                            <input name="accountId" type="text" style="visibility: hidden;"
+                                   value="<% out.print(acc.getID()); %>"/>
+                            <button type="submit" class="btn btn-default"><fmt:message key="overv.delete"/></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="changeAcc.jsp">
+                            <input name="accountId" type="text" style="visibility: hidden;"
+                                   value="<% out.print(acc.getID()); %>"/>
+                            <button type="submit" class="btn btn-default"><fmt:message key="overv.edit"/></button>
+                        </form>
                     </td>
                 </tr>
             <% } %>
