@@ -28,12 +28,16 @@
             </form>
             <%  // shows the username and the logout button just when someone is logged in
                 if (session.getAttribute("username") != null){ %>
+            <form class="navbar-form navbar-right" action="changeMasterPw.jsp">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info"><fmt:message key="head.btn.pw"/></button>
+                </div>
+            </form>
             <form class="navbar-form navbar-right" action="logoutProcess.jsp">
                 <div class="form-group">
                     <label class="control-label"><fmt:message key="wel.lbl.usern"/>: <% out.print(session.getAttribute("username")); %></label>
                     <input type="submit" class="btn btn-warning" value="Logout"/>
                 </div>
-
             </form>
             <%  } %>
         </div>

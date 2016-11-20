@@ -34,7 +34,7 @@
     <div class="col-md-1">
         <form action="changeAcc.jsp" class="form-inline">
             <button type="submit" class="btn btn-primary btn-sm" name="accountId"
-                    value="<% out.print(acc.getID()); %>"><fmt:message key="overv.edit"/>"</button>
+                    value="<% out.print(acc.getID()); %>"><fmt:message key="overv.edit"/></button>
         </form>
     </div>
 </div>
