@@ -16,8 +16,8 @@ public class ConnectionProvider {
             con = DriverManager.getConnection(CONNECTION_URL,USERNAME,PASSWORD);
             System.out.println("Connected to db");
         } catch (Exception e){
-            System.err.println("Got an exception");
-            System.err.println(e.getMessage());
+            System.err.println("Exception by connecting db");
+            System.err.println("Message: " + e.getMessage());
         }
     }
 

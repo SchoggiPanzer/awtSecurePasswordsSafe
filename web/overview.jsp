@@ -5,52 +5,43 @@
 <%@include file="header.jsp"%>
 
 <%-- Overviewpage when loged in. Shows all Accounts --%>
-<form name="accounts">
-    <table class="table">
-        <thead class="thead-inverse">
-            <tr>
-                <td><fmt:message key="overv.title"/></td>
-                <td>URL</td>
-                <td><fmt:message key="wel.lbl.usern"/></td>
-                <td><fmt:message key="wel.lbl.pw"/></td>
-                <td><fmt:message key="overv.option"/></td>
-            </tr>
-        </thead>
-        <%
-            // Gets all Accounts and writte them out in a table
-            int id = Integer.parseInt(session.getAttribute("user_id").toString());
-            List<Account> accounts = OverviewDao.getAccountsById(id);
+<div class="row">
+    <div class="col-md-offset-1 col-md-2"><h4><fmt:message key="overv.title"/></h4></div>
+    <div class="col-md-2"><h4>URL</h4></div>
+    <div class="col-md-2"><h4><fmt:message key="wel.lbl.usern"/></h4></div>
+    <div class="col-md-2"><h4><fmt:message key="wel.lbl.pw"/></h4></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-1"></div>
+</div>
+<%
+    // Gets all Accounts and writte them out in a table
+    int id = Integer.parseInt(session.getAttribute("user_id").toString());
+    List<Account> accounts = OverviewDao.getAccountsById(id);
 
-            for (Account acc : accounts) { %>
-                <tr>
-                    <form id="changeAcc" action="changeAcc.jsp">
-                        <input name="accountId" type="text" style="visibility: hidden;"
-                               value="<% out.print(acc.getID()); %>"/>
-                        <td> <% out.print(acc.getTitle()); %> </td>
-                        <td> <% out.print(acc.getWebsite()); %> </td>
-                        <td> <% out.print(acc.getUsername()); %> </td>
-                        <td> <% out.print(acc.getPassword()); %> </td>
-                    </form>
-                    <td>
-                        <div>
-                            <form action="deleteAcc.jsp">
-                                <input name="accountId" type="text" style="visibility: hidden;"
-                                       value="<% out.print(acc.getID()); %>"/>
-                                <button type="submit" class="btn btn-default"><fmt:message key="overv.delete"/></button>
-                            </form>
-                            <button form="changeAcc" type="submit" class="btn btn-default"><fmt:message key="overv.edit"/></button>
-                        </div>
-
-                    </td>
-                </tr>
-            <% } %>
-    </table>
-</form>
+    for (Account acc : accounts) {
+%>
+<div class="row">
+    <div class="col-md-offset-1 col-md-2"><% out.print(acc.getTitle()); %></div>
+    <div class="col-md-2"><% out.print(acc.getWebsite()); %></div>
+    <div class="col-md-2"><% out.print(acc.getUsername()); %></div>
+    <div class="col-md-2"><% out.print(acc.getPassword()); %></div>
+    <div class="col-md-1">
+        <form action="deleteAccProcess.jsp" class="form-inline">
+            <button type="submit" class="btn btn-danger btn-sm" name="accountId"
+                    value="<% out.print(acc.getID()); %>"><fmt:message key="overv.delete"/></button>
+        </form>
+    </div>
+    <div class="col-md-1">
+        <form action="changeAcc.jsp" class="form-inline">
+            <button type="submit" class="btn btn-primary btn-sm" name="accountId"
+                    value="<% out.print(acc.getID()); %>"><fmt:message key="overv.edit"/></button>
+        </form>
+    </div>
+</div>
+<% } %>
 
 <%-- Form for creating new Account --%>
-<form action="accountNew.jsp">
-    <button type="submit" class="btn btn-default">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <fmt:message key="overv.newAcc"/>
-    </button>
+<form action="accountNew.jsp" class="col-md-offset-1">
+    <button type="submit" class="btn btn-success"><fmt:message key="overv.newAcc"/></button>
 </form>
 

@@ -38,10 +38,9 @@ public class OverviewDao {
             }
 
         } catch (Exception e){
-            System.err.println("Got an exception");
-            System.err.println(e.getMessage());
+            System.err.println("Exception by getting accounts");
+            System.err.println("Message: " + e.getMessage());
         }
-
         return accounts;
     }
 }

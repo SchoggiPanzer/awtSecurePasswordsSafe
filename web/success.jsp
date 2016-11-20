@@ -3,9 +3,9 @@
 
 <%-- JSP when success by registration --%>
 
-<h1><fmt:message key="succ.msg"/></h1>
+<h2 class="col-md-offset-1"><fmt:message key="succ.msg"/></h2>
 
-<p><fmt:message key="succ.goto"/> <a href="welcome.jsp">Login</a></p>
+<h4 class="col-md-offset-1"><fmt:message key="succ.goto"/> <a href="welcome.jsp">Login</a></h4>
 
 </body>
 </html>

@@ -2,42 +2,52 @@
 <%@include file="header.jsp"%>
 
 <%-- Welcome page. Contains login and registration at the same Page --%>
-<div class="wel_con">
-    <div class="login_con">
-        <h1>Login</h1>
-        <%-- Form for login --%>
-        <form action="loginprocess.jsp" method="post">
-            <label for="log_uname">
-                <fmt:message key="wel.lbl.usern"/>:
-            </label></br>
-            <input type="text" id="log_uname" name="uname" required/></br></br>
-
-            <label for="log_pw">
-                <fmt:message key="wel.lbl.pw"/>:
-            </label></br>
-            <input type="password" id="log_pw" name="pw" required/></br></br>
-
-            <button type="submit" class="btn btn-info">Login</button>
+<div class="row">
+    <div class="col-md-4">
+        <h1 class="col-md-offset-2">Login</h1>
+        <form class="form-horizontal" action="loginprocess.jsp">
+            <div class="form-group">
+                <label for="log_uname" class="col-md-offset-2 col-md-3 control-label"><fmt:message key="wel.lbl.usern"/></label>
+                <div class="col-md-6">
+                    <input type="text" id="log_uname" name="uname" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="log_pw" class="col-md-offset-2 col-md-3 control-label"><fmt:message key="wel.lbl.pw"/></label>
+                <div class="col-md-6">
+                    <input type="password" id="log_pw" name="pw" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-5 col-md-2">
+                    <input type="submit" class="btn btn-primary" value="Login">
+                </div>
+            </div>
         </form>
     </div>
-    <div class="reg_con">
-        <h1><fmt:message key="wel.lbl.regtit"/></h1>
-        <%-- Form for registraition --%>
-        <form action="registrationprocess.jsp">
-            <label for="reg_uname">
-                <fmt:message key="wel.lbl.usern"/>:
-            </label></br>
-            <input type="text" id="reg_uname" name="uname" required/></br></br>
 
-            <label for="reg_pw">
-                <fmt:message key="wel.lbl.pw"/>:
-            </label></br>
-            <input type="password" id="reg_pw" name="pw" required/></br></br>
-
-            <button type="submit" class="btn btn-info"><fmt:message key="wel.btn.lbl.reg"/></button>
+    <div class="col-md-4">
+        <h1 class="col-md-offset-2"><fmt:message key="wel.lbl.regtit"/></h1>
+        <form class="form-horizontal" action="registrationprocess.jsp">
+            <div class="form-group">
+                <label for="reg_uname" class="col-md-offset-2 col-md-3 control-label"><fmt:message key="wel.lbl.usern"/></label>
+                <div class="col-md-6">
+                    <input type="text" id="reg_uname" name="uname" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="reg_pw" class="col-md-offset-2 col-md-3 control-label"><fmt:message key="wel.lbl.pw"/></label>
+                <div class="col-md-6">
+                    <input type="password" id="reg_pw" name="pw" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-5 col-md-2">
+                    <input type="submit" class="btn btn-primary" value="<fmt:message key="wel.btn.lbl.reg"/>">
+                </div>
+            </div>
         </form>
     </div>
 </div>
-
 </body>
 </html>
