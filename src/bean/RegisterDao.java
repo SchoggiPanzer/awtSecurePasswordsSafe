@@ -25,8 +25,6 @@ public class RegisterDao {
         lname = u.getLname();
         email = u.getEmail();
 
-        System.out.println("saved datas");
-
         try {
             Connection con = ConnectionProvider.getCon();
 
@@ -36,8 +34,8 @@ public class RegisterDao {
             status = ps.executeUpdate();
 
         } catch (Exception e) {
-            System.err.println("Got an exception");
-            System.err.println(e.getMessage());
+            System.err.println("Exception by registration");
+            System.err.println("Message: " + e.getMessage());
         }
 
         return status;

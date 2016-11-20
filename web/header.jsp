@@ -11,39 +11,30 @@
 <head>
     <jsp:include page="include.jsp"/>
 </head>
+
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <p class="navbar-brand">Password Safe</p>
             </div>
+            <form class="navbar-form navbar-right">
+                <%-- Selection for the language --%>
+                <select id="language" name="language" onchange="submit()">
+                    <option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
+                    <option value="de" ${language == 'de' ? 'selected' : ''}>German</option>
+                    <option value="fr" ${language == 'fr' ? 'selected' : ''}>French</option>
+                </select>
+            </form>
+            <%  // shows the username and the logout button just when someone is logged in
+                if (session.getAttribute("username") != null){ %>
+            <form class="navbar-form navbar-right" action="logoutProcess.jsp">
+                <div class="form-group">
+                    <label class="control-label"><fmt:message key="wel.lbl.usern"/>: <% out.print(session.getAttribute("username")); %></label>
+                    <input type="submit" class="btn btn-warning" value="Logout"/>
+                </div>
 
-            <ul class="nav navbar-nav navbar-right lang">
-                <li>
-                    <form>
-                        <%-- Selection for the language --%>
-                        <select id="language" name="language" onchange="submit()">
-                            <option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
-                            <option value="de" ${language == 'de' ? 'selected' : ''}>German</option>
-                            <option value="fr" ${language == 'fr' ? 'selected' : ''}>French</option>
-                        </select>
-                    </form>
-                </li>
-
-                <%  // shows the username and the logout button just when someone is logged in
-                    if (session.getAttribute("username") != null){ %>
-                <li class="username">
-                    <h4 style="float: left; margin-right: 5px">
-                        Logged in as <% out.print(session.getAttribute("username")); %>
-                    </h4>
-                </li>
-                <li class="btn-logout">
-                    <form action="logout.jsp">
-                        <button type="submit" class="btn btn-default">Logout</button>
-                    </form>
-                </li>
-                <%  } %>
-            </ul>
+            </form>
+            <%  } %>
         </div>
-
     </nav>

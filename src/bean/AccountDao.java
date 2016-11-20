@@ -19,8 +19,6 @@ public class AccountDao {
      */
     public static boolean createNewAccount(int id, Account a){
         try {
-            System.out.println("Hey");
-
             Connection con = ConnectionProvider.getCon();
 
             PreparedStatement ps = con.prepareStatement("INSERT INTO accounts (title, website, username, password, user_id) VALUES (?, ?, ?, ?, ?)");
@@ -33,8 +31,8 @@ public class AccountDao {
 
             ps.executeUpdate();
         } catch (Exception e){
-            System.err.println("Got an exception");
-            System.err.println(e.getMessage());
+            System.err.println("Exception by creationg new Account");
+            System.err.println("Message: " + e.getMessage());
             return false;
         }
         return true;

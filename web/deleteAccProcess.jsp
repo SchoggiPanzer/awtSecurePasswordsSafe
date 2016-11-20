@@ -10,7 +10,10 @@
 
     boolean success = AccountDao.deleteAcc(Id);
 
-    if(success) response.sendRedirect("overview.jsp");
+    if(success) {
+        System.out.println("Deleted Account with id " + accId);
+        response.sendRedirect("overview.jsp");
+    }
     else response.sendRedirect("error.jsp");
 %>
 </body>

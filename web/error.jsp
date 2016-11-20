@@ -3,9 +3,9 @@
 
 <%-- JSP when error by registration and login --%>
 
-<h1><fmt:message key="err.msg"/></h1>
+<h2 class="col-md-offset-1"><fmt:message key="err.msg"/></h2>
 
-<h4><fmt:message key="err.go"/> <a href="welcome.jsp"><fmt:message key="err.back"/></a></h4>
+<h4 class="col-md-offset-1"><fmt:message key="err.go"/> <a href="welcome.jsp"><fmt:message key="err.back"/></a></h4>
 
 </body>
 </html>

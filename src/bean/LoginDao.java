@@ -35,8 +35,8 @@ public class LoginDao {
                 return user;
             }
         } catch (Exception e){
-            System.err.println("Got an exception");
-            System.err.println(e.getMessage());
+            System.err.println("Exception by user validation");
+            System.err.println("Message: " + e.getMessage());
         }
 
         return null;
