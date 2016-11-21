@@ -24,7 +24,7 @@
     <div class="col-md-offset-1 col-md-2"><% out.print(acc.getTitle()); %></div>
     <div class="col-md-2"><% out.print(acc.getWebsite()); %></div>
     <div class="col-md-2"><% out.print(acc.getUsername()); %></div>
-    <div class="col-md-2"><% out.print(acc.getPassword()); %></div>
+    <div class="col-md-2 password"><% out.print(acc.getPassword()); %></div>
     <div class="col-md-1">
         <form action="deleteAccProcess.jsp" class="form-inline">
             <button type="submit" class="btn btn-danger btn-sm" name="accountId"
@@ -44,4 +44,22 @@
 <form action="accountNew.jsp" class="col-md-offset-1">
     <button type="submit" class="btn btn-success"><fmt:message key="overv.newAcc"/></button>
 </form>
+<script type="application/javascript">
+    $(document).ready(function(){
+        $(".password").each(function(){
+            var encrypted = $(this).text();
+            var key = CryptoJS.enc.Base64.parse(localStorage.getItem("masterPW"));
+            var iv = CryptoJS.enc.Base64.parse("#Base64IV#");
+
+            var decrypted = CryptoJS.AES.decrypt(encrypted, key, {iv: iv});
+            $(this).text(decrypted);
+        });
+//        var pw = $("#password").val();
+//        var key = CryptoJS.enc.Base64.parse(localStorage.getItem("masterPW"));
+//        var iv = CryptoJS.enc.Base64.parse("#Base64IV#");
+//
+//        var encrypted = CryptoJS.AES.encrypt(pw, key, {iv: iv});
+//        $("#password").val(encrypted);
+    });
+</script>
 

@@ -50,20 +50,19 @@
     </div>
 </div>
 </body>
-<script type="application/javascript" >
+<script type="application/javascript">
 
-    $("#btnLogin").click(function(){
-        var masterPW = $("#log_pw").val();
-        localStorage.setItem("masterPW", masterPW);
-        var hash = CryptoJS.SHA256("Shit");
-//        var hash = CryptoJS.SHA256(masterPW, CryptoJS.enc.Base64);
-        console.log("MasterPW: " + masterPW + "\nHASH: " + hash);
-        $("#log_pw").val(hash);
-    });
+//    $("#btnLogin").click(function(){
+//        var masterPW = $("#log_pw").val();
+//        localStorage.setItem("masterPW", masterPW);
+//        var hash = CryptoJS.SHA256;
+//        $("#log_pw").val(hash);
+//    });
 
     $("#btnRegister").click(function(){
         var pw = $("#reg_pw").val();
-        var hash = CryptoJS.SHA256(pw);
+        var hash = CryptoJS.SHA256;
+        console.log(hash);
         $("#reg_pw").val(hash);
     });
     // Retrieve

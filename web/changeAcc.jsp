@@ -46,16 +46,33 @@ Form for create a new Account
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-2">
-            <input type="submit" class="btn btn-primary form-control" value="<fmt:message key="acc.change"/>">
+            <input type="submit" id="btnChangeAccount" class="btn btn-primary form-control" value="<fmt:message key="acc.change"/>">
         </div>
     </div>
 </form>
-
 </body>
 <script type="application/javascript">
+    $(document).ready(function{
+        var encrypted = $("#password").text();
+        var key = CryptoJS.enc.Base64.parse(localStorage.getItem("masterPW"));
+        var iv = CryptoJS.enc.Base64.parse("#Base64IV#");
+
+        var decrypted = CryptoJS.AES.decrypt(encrypted, key, {iv: iv});
+        $("#password").text(decrypted);
+    });
+
     $("#btnPasswordGen").click(function () {
         var pw = randomPW();
         $("#password").val(pw);
+    });
+
+    $("#btnChangeAccount").click(function(){
+        var pw = $("#password").val();
+        var key = CryptoJS.enc.Base64.parse(localStorage.getItem("masterPW"));
+        var iv = CryptoJS.enc.Base64.parse("#Base64IV#");
+
+        var encrypted = CryptoJS.AES.encrypt(pw, key, {iv: iv});
+        $("#password").val(encrypted);
     });
 
     function randomPW() {
