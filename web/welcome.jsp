@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <div class="col-md-offset-5 col-md-2">
-                    <input type="submit" class="btn btn-primary" value="Login">
+                    <input type="submit" id="btnLogin" class="btn btn-primary" value="Login">
                 </div>
             </div>
         </form>
@@ -43,11 +43,30 @@
             </div>
             <div class="form-group">
                 <div class="col-md-offset-5 col-md-2">
-                    <input type="submit" class="btn btn-primary" value="<fmt:message key="wel.btn.lbl.reg"/>">
+                    <input type="submit" id="btnRegister" class="btn btn-primary" value="<fmt:message key="wel.btn.lbl.reg"/>">
                 </div>
             </div>
         </form>
     </div>
 </div>
 </body>
+<script type="application/javascript" >
+
+    $("#btnLogin").click(function(){
+        var masterPW = $("#log_pw").val();
+        localStorage.setItem("masterPW", masterPW);
+        var hash = CryptoJS.SHA256("Shit");
+//        var hash = CryptoJS.SHA256(masterPW, CryptoJS.enc.Base64);
+        console.log("MasterPW: " + masterPW + "\nHASH: " + hash);
+        $("#log_pw").val(hash);
+    });
+
+    $("#btnRegister").click(function(){
+        var pw = $("#reg_pw").val();
+        var hash = CryptoJS.SHA256(pw);
+        $("#reg_pw").val(hash);
+    });
+    // Retrieve
+    //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+</script>
 </html>
