@@ -25,7 +25,7 @@
     </column>
     <column id="9" parent="3" name="password">
       <mandatory>1</mandatory>
-      <data-type>varchar(30)|0</data-type>
+      <data-type>varchar(100)|0</data-type>
     </column>
     <column id="10" parent="3" name="user_id">
       <data-type>int(10)|0</data-type>

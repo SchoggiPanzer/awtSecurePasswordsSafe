@@ -38,13 +38,14 @@ Form for create a new Account
     </div>
 </form>
 </body>
-<script type="application/javascript" src="resources/js/aes.js">
+<script type="application/javascript">
     $("#btnNewAccount").click(function(){
         var pw = $("#password").val();
-        var key = CryptoJS.enc.Base64.parse(localStorage.getItem("masterPW"));
-        var iv = CryptoJS.enc.Base64.parse("#Base64IV#");
+        console.log(pw);
+        var key = localStorage.getItem("masterPW");
 
-        var encrypted = CryptoJS.AES.encrypt(pw, key, {iv: iv});
+        var encrypted = CryptoJS.AES.encrypt(pw, key);
+        console.log(encrypted);
         $("#password").val(encrypted);
     });
 
@@ -52,6 +53,7 @@ Form for create a new Account
         var pw = randomPW();
         $("#password").val(pw);
     });
+
 
     function randomPW() {
         console.log("Generate PW");

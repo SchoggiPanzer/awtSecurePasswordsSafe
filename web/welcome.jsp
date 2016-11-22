@@ -52,20 +52,18 @@
 </body>
 <script type="application/javascript">
 
-//    $("#btnLogin").click(function(){
-//        var masterPW = $("#log_pw").val();
-//        localStorage.setItem("masterPW", masterPW);
-//        var hash = CryptoJS.SHA256;
-//        $("#log_pw").val(hash);
-//    });
+    $("#btnLogin").click(function(){
+        var masterPW = $("#log_pw").val();
+        localStorage.setItem("masterPW", masterPW);
+        var hash = CryptoJS.SHA256(masterPW);
+        $("#log_pw").val(hash);
+    });
 
     $("#btnRegister").click(function(){
         var pw = $("#reg_pw").val();
-        var hash = CryptoJS.SHA256;
+        var hash = CryptoJS.SHA256(pw);
         console.log(hash);
         $("#reg_pw").val(hash);
     });
-    // Retrieve
-    //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
 </script>
 </html>

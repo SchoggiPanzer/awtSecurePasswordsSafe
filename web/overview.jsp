@@ -48,18 +48,12 @@
     $(document).ready(function(){
         $(".password").each(function(){
             var encrypted = $(this).text();
-            var key = CryptoJS.enc.Base64.parse(localStorage.getItem("masterPW"));
-            var iv = CryptoJS.enc.Base64.parse("#Base64IV#");
+            var key = localStorage.getItem("masterPW");
 
-            var decrypted = CryptoJS.AES.decrypt(encrypted, key, {iv: iv});
-            $(this).text(decrypted);
+            var decrypted = CryptoJS.AES.decrypt(encrypted, key);
+            var output = decrypted.toString(CryptoJS.enc.Utf8);
+            $(this).text(output);
         });
-//        var pw = $("#password").val();
-//        var key = CryptoJS.enc.Base64.parse(localStorage.getItem("masterPW"));
-//        var iv = CryptoJS.enc.Base64.parse("#Base64IV#");
-//
-//        var encrypted = CryptoJS.AES.encrypt(pw, key, {iv: iv});
-//        $("#password").val(encrypted);
     });
 </script>
 
