@@ -18,10 +18,7 @@ Form for create a new Account
         <div class="col-md-4">
             <input type="text" name="title" id="title" class="form-control" value="<%out.print(acc.getTitle());%>">
         </div>
-        <div class="col-md-2">
-            <input type="text" class="form-control" name="accountId"
-                   value="<%out.print(accId);%>" style="visibility: hidden"/>
-        </div>
+        <input type="hidden" class="form-control" name="accountId" value="<%out.print(accId);%>" />
     </div>
     <div class="form-group">
         <label for="website" class="col-md-2 control-label"><fmt:message key="acc.webs"/></label>
@@ -52,13 +49,14 @@ Form for create a new Account
 </form>
 </body>
 <script type="application/javascript">
-    $(document).ready(function{
-        var encrypted = $("#password").text();
-        var key = CryptoJS.enc.Base64.parse(localStorage.getItem("masterPW"));
-        var iv = CryptoJS.enc.Base64.parse("#Base64IV#");
-
-        var decrypted = CryptoJS.AES.decrypt(encrypted, key, {iv: iv});
-        $("#password").text(decrypted);
+    $(document).ready(function () {
+        console.log("ready");
+        var encrypted = $("#password").val();
+        var key = localStorage.getItem("masterPW");
+        console.log("Item: " + encrypted);
+        var decrypted = CryptoJS.AES.decrypt(encrypted, key);
+        var output = decrypted.toString(CryptoJS.enc.Utf8);
+        $("#password").val(output);
     });
 
     $("#btnPasswordGen").click(function () {
@@ -68,10 +66,9 @@ Form for create a new Account
 
     $("#btnChangeAccount").click(function(){
         var pw = $("#password").val();
-        var key = CryptoJS.enc.Base64.parse(localStorage.getItem("masterPW"));
-        var iv = CryptoJS.enc.Base64.parse("#Base64IV#");
+        var key = localStorage.getItem("masterPW");
 
-        var encrypted = CryptoJS.AES.encrypt(pw, key, {iv: iv});
+        var encrypted = CryptoJS.AES.encrypt(pw, key);
         $("#password").val(encrypted);
     });
 
